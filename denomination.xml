@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<denomination>
+	  <note_value>
+	      <id>20</id>   
+	      <count>0</count>
+	  </note_value>
+          <note_value>
+	      <id>50</id>  
+	      <count>999</count>
+	  </note_value>
+	</denomination>
