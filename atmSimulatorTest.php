@@ -1,8 +1,11 @@
 <?php
 require_once('simpletest/autorun.php');
 require_once('atmSimulator2.php');
+
+//Test class 
 class atmSimulatorTest extends UnitTestCase
 {
+    //function to test for zero amount requested
     public function testAtmSimulatorForZeroAmt()
     {
             $amountRequested = 0;
@@ -14,6 +17,7 @@ class atmSimulatorTest extends UnitTestCase
             $this->assertEqual($message,$output);
     }
     
+    //function to test for 100 amount requested
     public function testAtmSimulatorForHundredAmt()
     {
             $amountRequested = 100;
@@ -26,6 +30,7 @@ class atmSimulatorTest extends UnitTestCase
 
     }
     
+    //test for 70 as amount requested
     public function testAtmSimulatorForSeventyAmt()
     {
             $amountRequested = 70;
@@ -38,6 +43,7 @@ class atmSimulatorTest extends UnitTestCase
 
     }
     
+    //test for requested amount of 30
     public function testAtmSimulatorForThirtyAmt()
     {
             $amountRequested = 30;
@@ -50,6 +56,7 @@ class atmSimulatorTest extends UnitTestCase
 
     }
 	
+    //test for when no more notes of certain denomination left
     public function testAtmSimulatorForZeroNotes()
     {
             $amountRequested = 30;
