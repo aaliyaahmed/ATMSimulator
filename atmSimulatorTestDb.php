@@ -3,12 +3,15 @@ require_once('simpletest/autorun.php');
 require_once('atmSimulatorDb.php');
 class atmSimulatorTest extends UnitTestCase
 {
+    //initialise xml file
     private function initialise()
     {
         $simulator = new AtmSimulator();
         $simulator->changeCount(20,1000);
         $simulator->changeCount(50,1000);
     }
+    
+    //test for 0 amount requested
     public function testAtmSimulatorForZeroAmt()
     {
             $this->initialise();
@@ -19,7 +22,7 @@ class atmSimulatorTest extends UnitTestCase
             $message ="Please enter an amount more than 0<br/>";
             $this->assertEqual($message,$output);
     }
-    
+    //test for 100
     public function testAtmSimulatorForHundredAmt()
     {
             $amountRequested = 100;
@@ -30,7 +33,7 @@ class atmSimulatorTest extends UnitTestCase
             $this->assertEqual($message,$output);
 
     }
-    
+    //test for 70
     public function testAtmSimulatorForSeventyAmt()
     {
             $amountRequested = 70;
@@ -41,7 +44,7 @@ class atmSimulatorTest extends UnitTestCase
             $this->assertEqual($message,$output);
 
     }
-    
+    //test for 30
     public function testAtmSimulatorForThirtyAmt()
     {
             $amountRequested = 30;
